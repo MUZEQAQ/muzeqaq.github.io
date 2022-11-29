@@ -1,5 +1,4 @@
 import requests
-import schedule
 import random
 import logging
 import time
