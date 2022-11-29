@@ -3,36 +3,6 @@ import schedule
 import random
 import logging
 import time
-from colorama import init, Fore
-
-init(autoreset=True)
-
-
-def logger(file_log):
-    '''
-    打日志
-    :param file_log: 日志文件名，类型string；
-    '''
-    # 创建一个loggger，并设置日志级别
-    logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
-
-    # 创建一个handler，用于写入日志文件，并设置日志级别，mode:a是追加写模式，w是覆盖写模式
-    fh = logging.FileHandler(filename=file_log, encoding='utf-8', mode='w')
-    fh.setLevel(logging.INFO)
-
-    # 创建一个handler，用于将日志输出到控制台，并设置日志级别
-    ch = logging.StreamHandler()
-    ch.setLevel(logging.INFO)
-
-    # 定义handler的输出格式
-    formatter = logging.Formatter(
-        '%(asctime)s-%(name)s-%(filename)s-[line:%(lineno)d]''-%(levelname)s-[日志信息]: %(message)s')
-    fh.setFormatter(formatter)
-    ch.setFormatter(formatter)
-    # 给logger添加handler
-    logger.addHandler(fh)
-    logger.addHandler(ch)
 
 
 def getData():
@@ -368,26 +338,11 @@ def getData():
         </local:MyCard>   
         """
         print(a)
-#         print(
-#             Fore.GREEN + "读写成功 " + " " + Fore.YELLOW + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-#         print(res1['data']['name'] + " " + Fore.GREEN + a1)
-#         print(res2['data']['name'] + " " + Fore.GREEN + a2)
-#         print(res3['data']['name'] + " " + Fore.GREEN + a3)
-#         print(res4['data']['name'] + " " + Fore.GREEN + a4)
-#         print(res5['data']['name'] + " " + Fore.GREEN + a5)
-#         print(res6['data']['name'] + " " + Fore.GREEN + a6)
-#         print(res7['data']['name'] + " " + Fore.GREEN + a7)
-#         print(res8['data']['name'] + " " + Fore.GREEN + a8)
-#         print(res9['data']['name'] + " " + Fore.GREEN + a9)
-#         print(res10['data']['name'] + " " + Fore.GREEN + a10)
-#         print()
-#         print()
-        logger('./test.log')
+
 
     except:
-        c = "读写失败"
-#         print(f"\033[0;31m{c}\033[0m")
-        logger('./test.log')
+        ...
+
 
 
 if __name__ == '__main__':
