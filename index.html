@@ -1,103 +1,74 @@
-﻿
-<!-- 这是 PCL2 的主页自定义文件。你可以通过修改这个文件来自定义 PCL2 主页：添加文本、打开网页、启动游戏，等等。
-     如果你倒腾这个文件把 PCL2 玩炸了，把这个文件直接删除就行了。
-     如果你懂得 WPF 的布局文件编写，你甚至可以做出不少的新玩意儿…… -->
-      
-<local:MyCard Title="籽岷团队 - 直播间" CanSwap="True"   IsSwaped="True">
-    <StackPanel Margin="25,40,23,15">
-        <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/zi__min" Title="籽岷" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/544853" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/miku_master" Title="米神" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/1575100" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/kai_qi" Title="凯麒" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/726800" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/hanaowo" Title="哈娜" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/22625568" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/juanjuanzi" Title="卷卷" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/22769463" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/ziyinmy" Title="子音" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/2572741" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/Unclechong" Title="虫叔" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/718905" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/ginraku_o3o" Title="银珞" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/228729" 
-                          Type="Clickable" />
-            <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/ni_ca" Title="妮卡" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/4835374" 
-                          Type="Clickable" />
-    </StackPanel>
-</local:MyCard>
-<local:MyCard Title="之夏 - 直播间" CanSwap="True"   IsSwaped="True">
-    <StackPanel Margin="25,40,23,15">
-        <local:MyListItem 
-		                  Logo="https://mineskin.eu/helm/zhixia_" Title="之夏姥爷" Info="" 
-		                  EventType="打开网页" 
-                          EventData="https://live.bilibili.com/12529538" 
-                          Type="Clickable"
-                          />
-    </StackPanel>
-</local:MyCard>   
 
-<!-- 
-
-全部通用的属性：
- - Width、Height：设置宽度与高度
- - ToolTip：设置鼠标指向时的提示文本
- - Foreground：调整前景颜色（十六进制字符串，例如 #FF010203 代表 ARGB 中的 255,1,2,3。前两位代表不透明度，FF 为全不透明，00 为全透明）
- - Background：调整背景颜色（使用类似 Background="{DynamicResource ColorBrush5}" 的格式以调用 PCL2 当前的主题颜色，修改末尾的数字编号以改变颜色浓度）
- - Margin：调整外边距（格式为 左,上,右,下。例如 Margin="0,0,0,2" 即为 2 单位的下边距）
- - HorizontalAlignment：设置对齐方式（Left、Center、Right）
-
-TextBlock（纯文本）：
- - Text：设置显示的文本（如果要使用引号等特殊字符，自行百度 XAML 转义）
- - TextWrapping：开启自动换行
- - FontSize：设置字号
- 
-Image（图片）：
- - Source：要显示的图片的网址
-
-local:MyHint（提示条）：
- - Text：设置显示的文本（&#xA; 代表换行）
- - IsWarn：设置为 True 代表警告样式，False 代表提示样式
- 
-local:MyButton（按钮）：
- - Text：设置显示的文本
- - Padding：设置内边距，格式与 Margin 一致
- - ColorType：设置颜色主题（Highlight 为当前启动器的主题颜色，Red 为红色，默认为黑色）
- - EventType、EventData：触发特定事件
- 
-local:MyTextButton（文本按钮）：
- - Text：设置显示的文本
- - EventType、EventData：触发特定事件
- 
-local:MyCard（卡片）：
- - Title：设置显示的标题文本
- - CanSwap：这张卡片是否可以折叠，True 为是，False 为否
- - IsSwaped：这张卡片是否默认折叠，要求 CanSwap 必须为 True
-
--->
+        <local:MyCard Title="" Width="28" HorizontalAlignment="Right" Margin="0,-20,0,0">
+            <local:MyButton Margin="0,0,0,0" Width="30" Height="20" Background="{DynamicResource ColorBrush5}" HorizontalAlignment="Right" Padding="0,0,0,0" Text="刷新" EventType="刷新主页" ToolTip="刷新信息"/>
+        </local:MyCard>
+        <local:MyCard Title="籽岷团队 - 直播间" CanSwap="True"   IsSwaped="false">
+            <StackPanel Margin="25,40,23,15">
+                <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/zi__min" Title="籽岷	【籽岷的直播间】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/544853" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/miku_master" Title="米神哟	【哈娜生日快乐鸭！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/1575100" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/kai_qi" Title="GT凯麒	【做客哈娜生日会】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/726800" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/hanaowo" Title="哈娜hanna	【预谋在阳光正好的冬日遇见你..】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/22625568" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/juanjuanzi" Title="卷卷子啦	【冬季救援！卷卷拯救世界！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/22769463" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ziyinmy" Title="子音MY	【祝哈娜生日快乐！！！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/2572741" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/Unclechong" Title="虫叔叫种致远呀	【猪哈娜生日快乐！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/718905" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ginraku_o3o" Title="银珞子	【派~】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/228729" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ni_ca" Title="妮卡_nica	【给哈娜庆生~祝哈娜生日快乐(*^▽^*)】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/4835374" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+            </StackPanel>
+        </local:MyCard>
+        <local:MyCard Title="之夏 - 直播间" CanSwap="True"   IsSwaped="True">
+            <StackPanel Margin="25,40,23,15">
+                <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/zhixia_" Title="之夏姥爷	【【RLC硬核版】RLC一周目新人】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/12529538" 
+                                  Background="#00000000"
+                                  Type="Clickable"
+                                  />
+            </StackPanel>
+        </local:MyCard>   
+        
