@@ -2,9 +2,7 @@ name: Python application
 
 on:
   workflow_dispatch:
-    inputs:
-      branch_or_tag:
-        required: true 
+
     
 jobs:
   build:
