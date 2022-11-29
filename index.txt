@@ -1,1 +1,74 @@
 
+        <local:MyCard Title="" Width="28" HorizontalAlignment="Right" Margin="0,-20,0,0">
+            <local:MyButton Margin="0,0,0,0" Width="30" Height="20" Background="{DynamicResource ColorBrush5}" HorizontalAlignment="Right" Padding="0,0,0,0" Text="刷新" EventType="刷新主页" ToolTip="刷新信息"/>
+        </local:MyCard>
+        <local:MyCard Title="籽岷团队 - 直播间" CanSwap="True"   IsSwaped="false">
+            <StackPanel Margin="25,40,23,15">
+                <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/zi__min" Title="籽岷	【籽岷的直播间】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/544853" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/miku_master" Title="米神哟	【哈娜生日快乐鸭！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/1575100" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/kai_qi" Title="GT凯麒	【做客哈娜生日会】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/726800" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/hanaowo" Title="哈娜hanna	【预谋在阳光正好的冬日遇见你..】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/22625568" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/juanjuanzi" Title="卷卷子啦	【冬季救援！卷卷拯救世界！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/22769463" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ziyinmy" Title="子音MY	【祝哈娜生日快乐！！！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/2572741" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/Unclechong" Title="虫叔叫种致远呀	【猪哈娜生日快乐！】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/718905" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ginraku_o3o" Title="银珞子	【派~】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/228729" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+                    <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/ni_ca" Title="妮卡_nica	【给哈娜庆生~祝哈娜生日快乐(*^▽^*)】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/4835374" 
+                                  Background="#00000000"
+                                  Type="Clickable" />
+            </StackPanel>
+        </local:MyCard>
+        <local:MyCard Title="之夏 - 直播间" CanSwap="True"   IsSwaped="True">
+            <StackPanel Margin="25,40,23,15">
+                <local:MyListItem 
+                                  Logo="https://mineskin.eu/helm/zhixia_" Title="之夏姥爷	【【RLC硬核版】RLC一周目新人】" Info="未开播"
+                                  EventType="打开网页" 
+                                  EventData="https://live.bilibili.com/12529538" 
+                                  Background="#00000000"
+                                  Type="Clickable"
+                                  />
+            </StackPanel>
+        </local:MyCard>   
+        
