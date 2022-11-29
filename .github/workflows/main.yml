@@ -19,9 +19,21 @@ jobs:
         pip install requests
         pip install schedule
         pip install time
+        
+    - name: Update lanpang on bilibili
+      run: |
+        cd bilibili/lanpang
+        sh run.sh
+        
+    - name: Update guodong on bilibili
+      run: |
+        cd bilibili/guodong
+        sh run.sh
+        
     - name: Update Refresh
       run: |
         sh run.sh
+        
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
