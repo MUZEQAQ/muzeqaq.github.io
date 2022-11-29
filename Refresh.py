@@ -282,7 +282,6 @@ def getData():
         c9 = "#9966FFCC" if a9 == "开播" else "#00000000"
         c10 = "#9966FFCC" if a10 == "开播" else "#00000000"
 
-        f1 = open("index.html", "w+", encoding="utf-8")
 
         a = """
         <local:MyCard Title="" Width="28" HorizontalAlignment="Right" Margin="0,-20,0,0">
@@ -368,26 +367,26 @@ def getData():
             </StackPanel>
         </local:MyCard>   
         """
-        f1.write(a)
-        print(
-            Fore.GREEN + "读写成功 " + " " + Fore.YELLOW + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
-        print(res1['data']['name'] + " " + Fore.GREEN + a1)
-        print(res2['data']['name'] + " " + Fore.GREEN + a2)
-        print(res3['data']['name'] + " " + Fore.GREEN + a3)
-        print(res4['data']['name'] + " " + Fore.GREEN + a4)
-        print(res5['data']['name'] + " " + Fore.GREEN + a5)
-        print(res6['data']['name'] + " " + Fore.GREEN + a6)
-        print(res7['data']['name'] + " " + Fore.GREEN + a7)
-        print(res8['data']['name'] + " " + Fore.GREEN + a8)
-        print(res9['data']['name'] + " " + Fore.GREEN + a9)
-        print(res10['data']['name'] + " " + Fore.GREEN + a10)
-        print()
-        print()
+        print(a)
+#         print(
+#             Fore.GREEN + "读写成功 " + " " + Fore.YELLOW + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())))
+#         print(res1['data']['name'] + " " + Fore.GREEN + a1)
+#         print(res2['data']['name'] + " " + Fore.GREEN + a2)
+#         print(res3['data']['name'] + " " + Fore.GREEN + a3)
+#         print(res4['data']['name'] + " " + Fore.GREEN + a4)
+#         print(res5['data']['name'] + " " + Fore.GREEN + a5)
+#         print(res6['data']['name'] + " " + Fore.GREEN + a6)
+#         print(res7['data']['name'] + " " + Fore.GREEN + a7)
+#         print(res8['data']['name'] + " " + Fore.GREEN + a8)
+#         print(res9['data']['name'] + " " + Fore.GREEN + a9)
+#         print(res10['data']['name'] + " " + Fore.GREEN + a10)
+#         print()
+#         print()
         logger('./test.log')
 
     except:
         c = "读写失败"
-        print(f"\033[0;31m{c}\033[0m")
+#         print(f"\033[0;31m{c}\033[0m")
         logger('./test.log')
 
 
