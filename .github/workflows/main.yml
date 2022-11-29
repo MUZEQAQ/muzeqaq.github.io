@@ -4,9 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       branch_or_tag:
-        description: "target branch to deploy"
         required: true 
-        type: string
     
 jobs:
   build:
@@ -22,15 +20,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         
-    - name: Update lanpang on bilibili
-      run: |
-        cd bilibili/lanpang
-        sh run.sh
-        
-    - name: Update guodong on bilibili
-      run: |
-        cd bilibili/guodong
-        sh run.sh
         
     - name: Update Refresh
       run: |
