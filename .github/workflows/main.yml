@@ -1,8 +1,12 @@
 name: Python application
 
 on:
-  schedule:
-    - cron: '10 * * * *'
+  workflow_dispatch:
+    inputs:
+      branch_or_tag:
+        description: "target branch to deploy"
+        required: true 
+        type: string
     
 jobs:
   build:
